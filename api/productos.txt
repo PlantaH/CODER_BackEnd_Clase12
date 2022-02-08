@@ -1,0 +1,3 @@
+{"id":3,"title":"Bateria","price":777,"thumb":""}
+,{"id":4,"title":"Saxo","price":666,"thumb":""}
+,{"id":3,"title":"2","price":"2","thumb":"http://localhost:8080/"}

@@ -1,0 +1,23 @@
+{
+  "name": "desafio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PlantaH/CODER_BackEnd_Clase12.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PlantaH/CODER_BackEnd_Clase12/issues"
+  },
+  "homepage": "https://github.com/PlantaH/CODER_BackEnd_Clase12#readme",
+  "dependencies": {
+    "express-handlebars": "^6.0.2"
+  }
+}
