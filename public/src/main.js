@@ -50,6 +50,31 @@ formPublicarMensaje.addEventListener('submit', e => {
     inputMensaje.focus()
 })
 
+socket.on('users', usuarios => {
+    usuarios = [...new Set(usuarios.map(item => item.autor))]; // [ 'A', 'B']
+    
+    const html = usersShow(usuarios)
+    document.getElementById('usuarios').innerHTML = html;
+})
+
+function usersShow(usuarios) {
+    console.log(usuarios);
+    return usuarios.map(usuario => {
+        
+        let color = 'black'
+
+        let contentText = 'flex-start'
+        let backColor = 'gainsboro'
+         
+
+        return (`
+            <div  style="display: flex; justify-content: ${contentText}">
+                <b style="color:${color};">${usuario}</b> 
+            </div>
+        `)
+    }).join("<br/>");
+}
+
 socket.on('messages', mensajes => {
     const html = messagesShow(mensajes)
     document.getElementById('mensajes').innerHTML = html;

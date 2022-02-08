@@ -12,6 +12,15 @@ class contenedor {
         return buscado
     }*/
 
+    async getAllUsers() {
+        try {
+            const objs = await fs.readFile(this.ruta, 'utf-8')
+            return JSON.parse(objs)
+        } catch (error) {
+            return []
+        }
+    }
+
     async getAll() {
         try {
             const objs = await fs.readFile(this.ruta, 'utf-8')

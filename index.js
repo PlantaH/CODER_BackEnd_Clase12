@@ -31,15 +31,16 @@ io.on('connection', async socket => {
         io.sockets.emit('productos', file.getAll());
     })
 
-      
     socket.emit('messages', await messages.getAll());
+    socket.emit('users', await messages.getAllUsers());
  
     socket.on('newMessage', async mensaje => {
         mensaje.fyh = new Date().toLocaleString()
         mensaje.socketId = socket.id
-        console.log(mensaje);
+         
         await messages.save(mensaje)
-        io.sockets.emit('messages', await messages.getAll());
+        io.sockets.emit('messages', await messages.getAll());        
+        io.sockets.emit('users', await messages.getAllUsers());
     }) 
 });
  

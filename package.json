@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/PlantaH/CODER_BackEnd_Clase12#readme",
   "dependencies": {
-    "express-handlebars": "^6.0.2"
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "socket.io": "^4.4.1"
   }
 }
